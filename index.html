@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casa de Vila — Simone Fagundes</title>
+  <style>
+    :root{
+      --bg:#f7f9fb;
+      --card:#ffffff;
+      --primary:#2b6cb0;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --accent:#dbeafe;
+      --radius:10px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}
+    .container{width:min(1100px,94%);margin:0 auto;padding:0 0.5rem}
+    .site-header{background:var(--card);border-bottom:1px solid #e6eef7;position:sticky;top:0;z-index:10}
+    .site-header .container{display:flex;gap:1rem;align-items:center;padding:0.8rem 0}
+    .logo{margin:0;font-size:1.15rem;color:var(--primary)}
+    .nav{margin-left:auto;display:flex;gap:1rem;align-items:center}
+    .nav a{color:var(--muted);text-decoration:none;padding:0.4rem 0.6rem;border-radius:6px}
+    .nav a:hover{background:var(--accent);color:var(--primary)}
+
+    .hero{background:linear-gradient(180deg, rgba(43,108,176,0.06), rgba(66,153,225,0.03));padding:2.6rem 0;border-bottom:1px solid rgba(43,108,176,0.05)}
+    .hero-grid{display:flex;gap:1.2rem;align-items:center;justify-content:space-between}
+    .hero h2{margin:0 0 0.5rem;font-size:1.6rem}
+    .hero p{margin:0 0 1rem;color:var(--muted)}
+    .hero-image{display:flex;align-items:center;justify-content:center}
+
+    /* Foto do hero em círculo — ajustei object-position para mostrar mais o rosto */
+    .hero-photo{
+      width:180px;
+      height:180px;
+      object-fit:cover;
+      /* move a imagem para cima dentro do frame circular para centralizar mais o rosto */
+      object-position:50% 30%;
+      border-radius:50%;
+      border:4px solid var(--accent);
+      display:block;
+    }
+
+    .btn{display:inline-block;background:var(--primary);color:white;padding:0.6rem 1rem;border-radius:8px;text-decoration:none;border:none;cursor:pointer}
+    .btn:hover{opacity:0.95}
+    .btn-light{background:transparent;color:var(--primary);border:1px solid rgba(43,108,176,0.12)}
+    .section{padding:1.6rem 0}
+    .section h3{margin-top:0;color:var(--primary)}
+    .cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 1px 6px rgba(16,24,40,0.04)}
+    .tips{padding-left:1rem;color:var(--muted)}
+    .tips li{margin:0.6rem 0}
+
+    .agent-card{display:flex;gap:1rem;align-items:flex-start;background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 1px 6px rgba(16,24,40,0.04)}
+    /* Foto do cartão da corretora — maior raio e ajuste de posição para focar o rosto */
+    .agent-photo{
+      width:140px;
+      height:140px;
+      object-fit:cover;
+      /* move a imagem verticalmente para mostrar mais o rosto dentro do círculo */
+      object-position:50% 28%;
+      border-radius:50%;
+      border:4px solid var(--accent);
+      display:block;
+    }
+    .agent-info h4{margin:0 0 0.2rem}
+    .agent-info .muted{color:var(--muted);margin:0.2rem 0}
+    .contact p{margin:0.4rem 0}
+    .site-footer{border-top:1px solid #e6eef7;background:transparent;padding:1rem 0;margin-top:2rem;color:var(--muted);text-align:center;font-size:0.95rem}
+    .muted{color:var(--muted)}
+    .small{font-size:0.9rem}
+
+    /* responsivo */
+    @media (max-width:900px){
+      .hero-grid{flex-direction:column;text-align:center}
+      .agent-card{flex-direction:column;align-items:center;text-align:center}
+      .agent-info p{max-width:560px}
+    }
+    @media (max-width:640px){
+      .nav{display:none}
+      .hero h2{font-size:1.3rem}
+      .site-header .container{padding:0.6rem 0}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Casa de Vila</h1>
+      <nav class="nav">
+        <a href="#visao">Visão Geral</a>
+        <a href="#tendencias">Tendências</a>
+        <a href="#dicas">Dicas</a>
+        <a href="#corretora">Corretora</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h2>Olá — sou Simone Fagundes</h2>
+          <p>Corretora de imóveis e parceira do QuintoAndar. Você pode contar com minha assessoria para anunciar seu imóvel na plataforma com segurança. Se você é proprietário e pretende vender ou alugar seu imóvel, conte comigo.</p>
+          <a class="btn" href="#contato">Quero anunciar</a>
+        </div>
+        <div class="hero-image">
+          <!-- Se você estiver usando o arquivo local: mantenha src="images/simone.jpg" -->
+          <!-- Se preferir um arquivo único com base64, diga e eu insiro o base64 completo -->
+          <img class="hero-photo" src="images/simone.jpg" alt="Foto da corretora Simone Fagundes" />
+        </div>
+      </div>
+    </section>
+
+    <section id="visao" class="container section">
+      <h3>Visão Geral</h3>
+      <p>O mercado imobiliário envolve compra, venda e aluguel de imóveis residenciais e comerciais. Fatores que impactam o mercado incluem taxas de juros, oferta e demanda, desenvolvimento urbano e condições econômicas locais. Enquanto algumas regiões crescem rapidamente, outras apresentam estabilização de preços.</p>
+    </section>
+
+    <section id="tendencias" class="container section cards">
+      <h3>Tendências Atuais</h3>
+      <div class="card">
+        <h4>📈 Preços</h4>
+        <p>Em muitas cidades, preços tiveram valorização nos últimos anos, embora em ciclos de correção dependendo da oferta e demanda.</p>
+      </div>
+      <div class="card">
+        <h4>🏗️ Oferta</h4>
+        <p>Novos empreendimentos e reforma de áreas antigas aumentam a oferta, especialmente em bairros com infraestrutura melhorada.</p>
+      </div>
+      <div class="card">
+        <h4>💳 Financiamento</h4>
+        <p>Taxas de juros influenciam diretamente o acesso à compra. Linhas de crédito mais acessíveis aquecem a demanda.</p>
+      </div>
+    </section>
+
+    <section id="dicas" class="container section">
+      <h3>Dicas para Comprar ou Vender</h3>
+      <ul class="tips">
+        <li><strong>Para compradores:</strong> verifique a localização, infraestrutura e histórico de valorização; simule financiamentos antes de decidir.</li>
+        <li><strong>Para vendedores:</strong> prepare o imóvel (pequenas reformas e boas fotos) e estude o preço de mercado para posicionar o anúncio.</li>
+        <li><strong>Investidores:</strong> pense no horizonte de tempo (curto vs longo prazo) e na liquidez do ativo.</li>
+      </ul>
+    </section>
+
+    <section id="corretora" class="container section">
+      <h3>Sobre a Corretora</h3>
+      <div class="agent-card">
+        <img class="agent-photo" src="images/simone.jpg" alt="Foto da corretora Simone Fagundes" />
+        <div class="agent-info">
+          <h4>Simone Fagundes</h4>
+          <p class="muted">Corretora de Imóveis — Parceira do QuintoAndar</p>
+          <p>Você pode contar com minha assessoria para anunciar seu imóvel na plataforma com segurança. Se é proprietário e pretende vender ou alugar, vou acompanhar todo o processo — desde a preparação do anúncio até o fechamento.</p>
+          <p><strong>Atendimento personalizado e seguro.</strong></p>
+          <a class="btn btn-light" href="mailto:simonefagundes@gmail.com">Entrar em contato</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="container section contact">
+      <h3>Contato</h3>
+      <p>Para contato direto: <a href="mailto:simonefagundes@gmail.com">simonefagundes@gmail.com</a></p>
+      <p class="muted small">Se preferir um retorno por telefone, inclua seu número no e-mail que eu retorno o mais breve possível.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="ano"></span> Casa de Vila — Simone Fagundes (Parceira do QuintoAndar)</p>
+    </div>
+  </footer>
+
+  <script>
+    // atualiza ano no rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
