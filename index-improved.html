@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Casa de Vila Consultoria Imóveis — Encontre seu imóvel em SP</title>
+  <meta name="description" content="Casa de Vila Consultoria Imóveis — Consultoria imobiliária em São Paulo. Agende visitas e encontre o imóvel ideal. WhatsApp: +55 11 93214-9696" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Casa de Vila Consultoria Imóveis — Encontre seu imóvel em SP" />
+  <meta property="og:description" content="Consultoria imobiliária em São Paulo. Agende visitas e encontre o imóvel ideal. Contato via WhatsApp +55 11 93214-9696" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://simonefagundes3840.github.io/CasadeVila_consultoria_imoveis/" />
+  <meta property="og:image" content="/simone.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="styles-improved.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Casa de Vila</h1>
+      <nav class="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#imoveis">Imóveis</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="header-contact">
+        <a class="whatsapp" href="https://wa.me/5511932149696" target="_blank" rel="noopener">WhatsApp: +55 11 93214-9696</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Encontre seu imóvel ideal em São Paulo</h1>
+          <p>Consultoria especializada em casas de vila e imóveis residenciais. Agende uma visita pelo WhatsApp.</p>
+          <p class="cta-row">
+            <a class="btn btn-primary" href="https://wa.me/5511932149696?text=Olá!%20Quero%20agendar%20uma%20visita" target="_blank" rel="noopener">Agende pelo WhatsApp</a>
+            <a class="btn btn-outline" href="#imoveis">Ver imóveis</a>
+          </p>
+        </div>
+        <div class="hero-photo">
+          <img src="/simone.jpg" alt="Simone - Casa de Vila" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container">
+        <h2>Sobre</h2>
+        <p>Somos especializados em consultoria imobiliária focada em casas de vila e imóveis residenciais em São Paulo. Atuamos com transparência e atendimento personalizado.</p>
+      </div>
+    </section>
+
+    <section id="imoveis" class="section">
+      <div class="container">
+        <h2>Imóveis em destaque</h2>
+        <div class="projects-grid">
+          <!-- Exemplos de cards; substitua IMG_SOURCE e textos -->
+          <article class="project-card">
+            <img src="/images/placeholder-1.jpg" alt="Imóvel 1" loading="lazy" />
+            <h3>Casa de Vila - Vila Madalena</h3>
+            <p>3 quartos · 2 banheiros · Agende visita</p>
+            <p class="project-links"><a href="https://wa.me/5511932149696?text=Tenho%20interesse%20no%20Imóvel%201" target="_blank" rel="noopener">Agendar</a></p>
+          </article>
+
+          <article class="project-card">
+            <img src="/images/placeholder-2.jpg" alt="Imóvel 2" loading="lazy" />
+            <h3>Casa de Vila - Pinheiros</h3>
+            <p>2 quartos · 1 banheiro · Agende visita</p>
+            <p class="project-links"><a href="https://wa.me/5511932149696?text=Tenho%20interesse%20no%20Imóvel%202" target="_blank" rel="noopener">Agendar</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="section">
+      <div class="container">
+        <h2>Serviços</h2>
+        <ul>
+          <li>Consultoria personalizada</li>
+          <li>Avaliação de imóveis</li>
+          <li>Agendamento de visitas</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <div class="container contact-grid">
+        <div>
+          <h2>Contato</h2>
+          <p>Telefone/WhatsApp: <a href="https://wa.me/5511932149696" target="_blank" rel="noopener">+55 11 93214-9696</a></p>
+          <p>Instagram: <a href="https://www.instagram.com/CasadeVila_consultoria_imoveis" target="_blank" rel="noopener">@CasadeVila_consultoria_imoveis</a></p>
+          <p>Email: <a href="mailto:contato@casadevila.com.br">contato@casadevila.com.br</a></p>
+
+          <div class="social-icons">
+            <a href="https://www.instagram.com/CasadeVila_consultoria_imoveis" target="_blank" rel="noopener" aria-label="Instagram">
+              <img src="/images/instagram-icon.svg" alt="Instagram" />
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <label for="name">Nome</label>
+          <input id="name" type="text" name="name" required />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" name="_replyto" required />
+
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button class="btn btn-primary" type="submit">Enviar</button>
+          <p class="form-note">Ou envie uma mensagem direta no WhatsApp</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Casa de Vila — Consultoria Imóveis</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating button -->
+  <a class="whatsapp-float" href="https://wa.me/5511932149696?text=Olá!%20Quero%20saber%20mais" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <img src="/images/whatsapp-icon.svg" alt="WhatsApp" />
+  </a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Simple form success message (client-side)
+    const form = document.querySelector('.contact-form');
+    if(form){
+      form.addEventListener('submit', (e)=>{
+        setTimeout(()=>{
+          alert('Mensagem enviada! Obrigada — entraremos em contato pelo email ou WhatsApp.');
+        }, 200);
+      });
+    }
+  </script>
+</body>
+</html>
